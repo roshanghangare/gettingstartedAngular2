@@ -13,9 +13,9 @@ export class StarComponent{
         this.starWidth=this.rating * 86/5;
     }
 
-    @Output() notify:EventEmitter<string>=new EventEmitter<string>();
-    onclick(){
-        this.notify.emit('Clicked!');
+    @Output() ratingClicked:EventEmitter<string>=new EventEmitter<string>();
+    onClick1(){
+        this.ratingClicked.emit(`The rating  ${this.rating} was clicked`);
     }
 
 
